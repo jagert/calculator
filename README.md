@@ -16,7 +16,7 @@ The main aim is to test and compare performance of different parsing algorithms.
 
 # How to use:
 
-- clone repository: $ git clone git://github.com/schacon/grit.git
+- clone repository: $ git clone https://github.com/jagert/calculator.git
 - install dependencies: $ npm i
 - run script: $ npm run calc
 - run tests: $ npm test
