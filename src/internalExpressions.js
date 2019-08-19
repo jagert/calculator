@@ -12,6 +12,12 @@ const isValidPrefix = prefix => prefix === '(' || isOperator(prefix) || prefix =
 const isValidSuffix = suffix => suffix === ')' || isOperator(suffix) || suffix === undefined
 
 export const executeExpression = expression => {
+  if (
+    typeof expression !== 'string' ||
+    (typeof expression === 'string' && expression.trim() === '')
+  )
+    return false
+
   const internalExpressionEnd = expression.indexOf(')')
   const internalExpressionStart = expression
     .substring(0, internalExpressionEnd !== -1 ? internalExpressionEnd : undefined)
